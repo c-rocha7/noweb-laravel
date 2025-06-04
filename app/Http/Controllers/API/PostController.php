@@ -20,7 +20,11 @@ class PostController extends Controller
 
     public function store(StorePostRequest $request): JsonResponse
     {
+        // dd($request->user()->posts());
+
         $post = $request->user()->posts()->create($request->validated());
+
+        // dd($post);
 
         return response()->json([
             'message' => 'Postagem criada com sucesso!',
