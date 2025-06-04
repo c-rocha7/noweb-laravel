@@ -22,7 +22,7 @@ class LoginUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'string', 'email'],
+            'email'    => ['required', 'string', 'email'],
             'password' => ['required', 'string'],
         ];
     }
@@ -30,8 +30,8 @@ class LoginUserRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'email.required' => 'O campo email é obrigatório.',
-            'email.email' => 'Por favor, insira um endereço de e-mail válido.',
+            'email.required'    => 'O campo email é obrigatório.',
+            'email.email'       => 'Por favor, insira um endereço de e-mail válido.',
             'password.required' => 'O campo senha é obrigatório.',
         ];
     }

@@ -2,13 +2,13 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Post;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 
 class ChangePostTitlesCommand extends Command
 {
     protected $signature = 'posts:change-titles';
+
     protected $description = 'Altera o título de todas as postagens para "noweb"';
 
     public function handle(): int
